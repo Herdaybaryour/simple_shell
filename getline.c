@@ -1,5 +1,6 @@
 #include "shell.h"
 
+<<<<<<< HEAD
 /**
  * input_buf - buffers chained commands
  * @info: parameter struct
@@ -168,3 +169,43 @@ _puts("\n");
 _puts("$ ");
 _putchar(BUF_FLUSH);
 }
+=======
+
+
+/**
+ *
+ *  * input_buf - buffers chained commands
+ *
+ *   * @info: parameter struct
+ *
+ *    * @buf: address of buffer
+ *
+ *     * @len: address of len var
+ *
+ *      *
+ *
+ *       * Return: bytes read
+ *
+ *        */
+
+ssize_t input_buf(info_t *info, char **buf, size_t *len)
+
+{
+
+		ssize_t r = 0;
+
+			size_t len_p = 0;
+
+
+
+				if (!*len) /* if nothing left in the buffer, fill it */
+
+						{
+
+									/*bfree((void **)info->cmd_buf);*/
+
+									free(*buf);
+
+*buf = NULL;
+signal(SIGINT, sigintHandler);
+>>>>>>> 6df9d730b4132692af622ec60bb9bc4127f70dd1
